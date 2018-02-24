@@ -1,6 +1,6 @@
 # This file creates all the features of immunotherapy from
 # the .csv data file. Splitting the features into individual
-# objects will make accessing their values later on easier.
+# objects will make accessing their values later on easier
 
 import pandas as pd
 

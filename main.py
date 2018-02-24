@@ -1,2 +1,8 @@
+# INTRODUCTION HERE
+
+# Import code from other files
 from initialize_data import *
-git add
+from sigmoid import *
+
+# Import dependencies
+
