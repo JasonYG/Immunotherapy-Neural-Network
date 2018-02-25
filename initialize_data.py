@@ -43,10 +43,13 @@ result_of_treatment = data["Result_of_Treatment"]
 del data["Result_of_Treatment"]
 all_labels.append(result_of_treatment)
 
+# For use in other files
+number_of_features = len(all_labels)
+number_of_data = len(all_labels[0])
+
 # Create training and testing set of data
 training_labels = []
 testing_labels = []
-size = len(all_labels[0])
-for i in range(len(all_labels)):
-    training_labels.append(all_labels[i][:int(size/2)])
-    testing_labels.append(all_labels[i][int(size/2):])
+for i in range(number_of_features):
+    training_labels.append(all_labels[i][:int(number_of_data/2)])
+    testing_labels.append(all_labels[i][int(number_of_data/2):])

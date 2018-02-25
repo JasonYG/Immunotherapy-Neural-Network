@@ -6,7 +6,6 @@ from initialize_data import *
 
 import numpy as np
 
-number_of_features = len(all_labels)
 network_weights = []
 
 for i in range(number_of_features):
