@@ -46,7 +46,7 @@ all_labels.append(result_of_treatment)
 # Create training and testing set of data
 training_labels = []
 testing_labels = []
-index = len(all_labels[0])
+size = len(all_labels[0])
 for i in range(len(all_labels)):
-    training_labels.append(all_labels[i][:int(index/2)])
-    testing_labels.append(all_labels[i][int(index/2):])
+    training_labels.append(all_labels[i][:int(size/2)])
+    testing_labels.append(all_labels[i][int(size/2):])
