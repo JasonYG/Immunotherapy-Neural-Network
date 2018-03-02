@@ -12,3 +12,5 @@ for i in range(number_of_features):
     # Start with random values for weights
     v = np.random.randn()
     network_weights.append(v)
+
+bias = np.random.randn()
