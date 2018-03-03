@@ -21,7 +21,7 @@ all_labels.append(age)
 
 time = data["Time"]
 del data["Time"]
-all_labels.append(age)
+all_labels.append(time)
 
 number_of_warts = data["Number_of_Warts"]
 del data["Number_of_Warts"]
