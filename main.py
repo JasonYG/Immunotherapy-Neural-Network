@@ -13,23 +13,20 @@ import sympy as sym
 import time
 start_time = time.time()
 
-#print(sym.pi)
-train(42)
-ind = 0
-point = []
-# Creates an array with all the features of the given
-# data point. The -1 index of 'point' is the label
-for k in range(number_of_features):
-    point.append(testing_labels[k][57])
+# Train neural network
+train(45)
 
-print(point)
-print(neural_network(point,network_weights,bias))
-point = []
-
-for k in range(number_of_features):
-    point.append(testing_labels[k][66])
-
-print(point)
-print(neural_network(point,network_weights,bias))
-
+# Test neural network
+accuracy = 0
+for j in range(45, 90):
+    # Creates an array with all the features of the given
+    # data point. The -1 index of 'point' is the label
+    point = []
+    for k in range(number_of_features):
+      point.append(testing_labels[k][j])
+    pred = neural_network(point,network_weights,bias)
+    print("Result for " + str(j) + " is: " + str(pred))
+    if round(pred) == point[-1]:
+        accuracy +=1
+print("The accuracy of the neural network is: " + str(pred/45 * 100) + "%")
 print("--- %s seconds ---" % (time.time() - start_time))
