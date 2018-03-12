@@ -12,10 +12,10 @@ import sympy as sym
 # which represents the number of training feature data points
 def train(n):
     global bias
-    # The value of these variable is arbitrary, and can be
+    # The value of these variables is arbitrary, and can be
     # changed to yield better results from the neural network
     number_of_loops = 100
-    learning_rate = 0.2
+    learning_rate = 0.1
     for i in range(number_of_loops):
         ind = np.random.randint(n)
         point = []
@@ -29,7 +29,7 @@ def train(n):
         # neural network, to be used in updating the weights
 
         update_weights = differentiate(point)
-
+        
         # Updates the weights of each feature
         for k in range(number_of_features-1):
             network_weights[k] -= learning_rate * update_weights[k]

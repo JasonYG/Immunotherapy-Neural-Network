@@ -25,8 +25,9 @@ for j in range(45, 90):
     for k in range(number_of_features):
       point.append(testing_labels[k][j])
     pred = neural_network(point,network_weights,bias)
-    print("Result for " + str(j) + " is: " + str(pred))
+    print(point)
+    print("Result for " + str(j) + " is: " + str(pred) + "\n")
     if round(pred) == point[-1]:
-        accuracy +=1
-print("The accuracy of the neural network is: " + str(pred/45 * 100) + "%")
+        accuracy += 1
+print("The accuracy of the neural network is: " + str(accuracy/45 * 100) + "%")
 print("--- %s seconds ---" % (time.time() - start_time))

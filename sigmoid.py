@@ -3,4 +3,10 @@
 # 1
 import math
 def sig(x):
-    return 1/(1+math.exp(-x))
+    try:
+        return 1/(1+math.exp(-x))
+    except OverflowError:
+        if x > 0:
+            return 0
+        else:
+            return 1
